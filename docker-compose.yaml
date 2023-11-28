@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  purchase-transaction-service-prd:
+    build: .
+    image: purchase-transaction-service-prd:latest
+    container_name: "purchase-transaction-service-prd"
+    depends_on:
+      - purchase-transaction-mongo-prd
+    ports:
+      - "8080:8080"
+
+  purchase-transaction-mongo-prd:
+    image: mongo:latest
+    container_name: "purchase-transaction-mongo-prd"
+    ports:
+      - "27018:27017"

@@ -1,0 +1,7 @@
+spring:
+  data:
+    mongodb:
+      database: purchase-transaction-service
+      host: "purchase-transaction-mongo-prd"
+      port: '27017'
+
